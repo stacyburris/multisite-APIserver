@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 app.use(express.json());  //turns the req.body into json
 app.use(express.urlencoded({extended: true}));
 
-//app.use(apiRoutes);  // all my routes
+app.use('/customer', apiRoutes);  // all my routes
 app.use(logger);   // console.log() routes and methods
 
 

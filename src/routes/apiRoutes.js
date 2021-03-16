@@ -22,8 +22,8 @@ async function handleGetAll(req, res) {
   console.log('made it in the get all function');
   try {
     console.log('this is the request', req);
-    let allStudents = await student.get();
-    res.status(200).json(allStudents);
+    let allCustomers = await customer.get();
+    res.status(200).json(allCustomers);
  } catch (e) {
    throw new Error(e.message)
  }
@@ -32,8 +32,8 @@ async function handleGetOne(req, res) {
  try {
   console.log('this is the request', req);
     const id = req.params.id;
-    let oneStudent = await student.get(id)
-    res.status(200).json(oneStudent);
+    let oneCustomer = await customer.get(id)
+    res.status(200).json(oneCustomer);
  } catch (e) {
    throw new Error(e.message)
  }
@@ -42,7 +42,7 @@ async function handleAdd(req, res) {
  try {
   console.log('this is the request', req);
     let obj = req.body;
-    let newRecord = await student.create(obj);
+    let newRecord = await customer.create(obj);
     res.status(201).json(newRecord);
  } catch (e) {
    throw new Error(e.message)
@@ -53,7 +53,7 @@ async function handleUpdate(req, res) {
   console.log('this is the request', req);
     const id = req.params.id;
     const obj = req.body;
-    let updatedRecord = await student.update(id, obj)
+    let updatedRecord = await customer.update(id, obj)
     res.status(200).json(updatedRecord);
  } catch (e) {
    throw new Error(e.message)
@@ -62,7 +62,7 @@ async function handleUpdate(req, res) {
 async function handleDelete(req, res) {
  try {
     let id = req.params.id;
-    let deletedRecord = await student.delete(id);
+    let deletedRecord = await customer.delete(id);
     res.status(200).json(deletedRecord);
  } catch (e) {
    throw new Error(e.message)
