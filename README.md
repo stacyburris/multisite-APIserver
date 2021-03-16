@@ -2,6 +2,12 @@
 
 Quality functional server to test API routes with projects that I build
 
+## Deploys
+
++ [Heroku Deployed backend](https://multisite-apiserver.herokuapp.com/)
+
++ [Heroku Deployed frontend]()
+
 ## Haircare project
 
 ## Postman
@@ -26,9 +32,12 @@ Quality functional server to test API routes with projects that I build
 
 + Body: empty
 
-**PUT:** http://localhost:3000/customer/`<enter id number here from get>`
+**PUT:** http://localhost:3000/customer/
+`<enter id number here from get>`
 
 + Body: Change whichever one you would like to update
+
++ Example:
 
 ```
 {
@@ -36,10 +45,12 @@ Quality functional server to test API routes with projects that I build
 }
 ```
 
-**GET (one):** http://localhost:3000/customer/`<enter id number here>`
+**GET (one):** http://localhost:3000/customer/
+`<enter id number here>`
 
 + Body: empty
 
-**Delete:** http://localhost:3000/customer/`<enter id number here>`
+**Delete:** http://localhost:3000/customer/
+`<enter id number here>`
 
 + Body: empty
