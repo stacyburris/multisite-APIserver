@@ -3,7 +3,7 @@
 const express = require('express'); //express server
 const app = express(); 
 const cors = require('cors'); //allow cors
-const morgan = require('morgan'); //helps with middleware
+const morgan = require('morgan'); //helps with middleware for logging incoming requests
 require('./models/customer');
 const mongoose = require('mongoose');
 const Customer = mongoose.model('customer');
